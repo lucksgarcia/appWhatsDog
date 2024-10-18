@@ -4,10 +4,10 @@ import { StyleSheet, View } from 'react-native';
 
 
 
-const GradientBackground2 = ({ children, style }) => {
+const GradientBackground3 = ({ children, style }) => {
   return (
     <LinearGradient
-      colors={['#4552CB', '#ffff']} // Define as cores do gradiente #4552CB', '#4596EA,
+      colors={['#4681e8', '#ffffff']} // Define as cores do gradiente #4552CB', '#4596EA,
       style={[styles.background, style]} // Permite passar estilos customizados via props
     >
       {children}
@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default GradientBackground2;
+export default GradientBackground3;

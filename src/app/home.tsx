@@ -5,17 +5,16 @@ import stylesGradient from '../components/backGroundpage/gradientBackgroundStyle
 import pataStyles from '../components/pataPng/pataPngStyles';
 import PataPngCp from '../components/pataPng/pataPngCp';
 import { estilo } from '../estilos/estiloPrincipal';
-import { useNavigation } from '@react-navigation/native';
+import { Link } from 'expo-router';
 import { useFonts, EncodeSans_400Regular, EncodeSans_700Bold } from '@expo-google-fonts/encode-sans';
-import login from './login';
 import GradientBackground2 from '../components/backGroundpage/gradientBackground2';
 
-//====================================================//
+//========================================================================================================//
 
 
-const home = () => {
+export default function home(){
 
-  const openScreen = useNavigation();
+
 
   let [fontsLoaded] = useFonts({
     EncodeSans_700Bold, EncodeSans_400Regular,
@@ -31,48 +30,50 @@ const home = () => {
 
     <GradientBackground style={stylesGradient.container}>
 
-      
+
       <View style={estilo.containerlogoPages}>
         <Text style={estilo.textologoPages}>What's DOG</Text>
       </View>
 
 
       <View style={estilo.containerCurveDog}>
-      <Image
-        source={require('../../assets/imagens/dogCurve.png')} // Caminho para a imagem local
-        style={estilo.curveDogImage}
-      />
-    </View>
+        <Image
+          source={require('../../assets/imagens/dogCurve.png')} // Caminho para a imagem local
+          style={estilo.curveDogImage}
+        />
+      </View>
 
-    <View>
-          <Text style={{fontSize: 25,
-                textAlign: 'center',
-                fontFamily: 'EncodeSans_400Regular',
-                fontWeight: 'bold',
-                color: '#ffff',
-                paddingBottom:20}}>Qual a raça do seu cão?</Text>
-    </View>
+      <View>
+        <Text style={{
+          fontSize: 25,
+          textAlign: 'center',
+          fontFamily: 'EncodeSans_400Regular',
+          fontWeight: 'bold',
+          color: '#ffff',
+          paddingBottom: 20
+        }}>Qual a raça do seu cão?</Text>
+      </View>
 
-    <View>
-          <Text style={{fontSize: 18,
-                textAlign: 'justify',
-                fontFamily: 'EncodeSans_400Regular',
-                fontWeight: 'medium',
-                color: '#ffff',
-                paddingHorizontal:15,
-                paddingBottom:15}}><Text>Você pode não saber, mas nossa inteligência</Text>
-                                    <Text> artificial sabe, e irá detalhar para você.</Text>
-          </Text>
-    </View>
-    
+      <View>
+        <Text style={{
+          fontSize: 18,
+          textAlign: 'justify',
+          fontFamily: 'EncodeSans_400Regular',
+          fontWeight: 'medium',
+          color: '#ffff',
+          paddingHorizontal: 15,
+          paddingBottom: 15
+        }}><Text>Você pode não saber, mas nossa inteligência</Text>
+          <Text> artificial sabe, e irá detalhar para você.</Text>
+        </Text>
+      </View>
+
       <TouchableOpacity
         style={estilo.botao}
-        onPress={() => openScreen.navigate(login)} // Navega para a página de Login
-
       >
 
         <View style={estilo.btnArea}>
-          <Text style={estilo.btnTexto}>Vamos começar</Text>
+          <Text style={estilo.btnTexto}><Link href={'/login'}> Vamos começar</Link></Text>
         </View>
 
       </TouchableOpacity>
@@ -99,4 +100,3 @@ const home = () => {
   );
 }
 
-export default home

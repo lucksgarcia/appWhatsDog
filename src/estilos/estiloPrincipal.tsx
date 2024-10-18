@@ -49,6 +49,15 @@ export const estilo = StyleSheet.create({
     fontWeight: 'condensedBold'
   },
 
+  texto: {
+    fontSize: 20,
+    color: '#fff',
+    textAlign: 'center',
+    fontFamily: 'EncodeSans_700Bold',
+    fontWeight: 'normal'
+  },
+
+
   textologoDogs: {
     fontSize: 55,
     color: '#FFCF6F',
@@ -58,8 +67,8 @@ export const estilo = StyleSheet.create({
   },
 
   botao: {
-    width: 230,
-    height: 50,
+    width: 260,
+    height: 40,
     borderWidth: 2,
     borderColor: '#FFCF6F',
     backgroundColor: '#FFCF6F',
@@ -112,7 +121,7 @@ export const estilo = StyleSheet.create({
   containerlogoPages: {
     justifyContent: 'center',
     paddingHorizontal: 10, // Adiciona algum padding horizontal
-    paddingTop: 10,
+    paddingTop: 20,
     //paddingRight: 60,
     //alignSelf: 'flex-end',
     //paddingBottom: 10
@@ -121,10 +130,9 @@ export const estilo = StyleSheet.create({
   textologoPages: {
     fontSize: 35,
     color: '#FFCF6F',
-    textAlign: 'right',
-    fontWeight: 'bold',
-
-  },
+    textAlign: 'center',
+    fontWeight: 'bold', 
+  }
 
 });
 

@@ -8,13 +8,13 @@ export const stylesGradient = StyleSheet.create({
     },
     content: {
       paddingVertical: 10,
-      paddingHorizontal:50,
+      paddingHorizontal:10,
       backgroundColor: '#FFCF6F', // Fundo transparente para destacar o gradiente
       borderRadius: 20,
     },
     text: {
       fontSize: 18,
-      color: '#fff',
+      color: '#030303',
     },
   });
 
