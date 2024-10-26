@@ -12,9 +12,10 @@ import GradientBackground2 from '../components/backGroundpage/gradientBackground
 //========================================================================================================//
 
 
-export default function home(){
+export default function home() {
 
 
+/*codigo de carregamento da fonte especifica
 
   let [fontsLoaded] = useFonts({
     EncodeSans_700Bold, EncodeSans_400Regular,
@@ -23,6 +24,7 @@ export default function home(){
   if (!fontsLoaded) {
     return <ActivityIndicator size="large" />;
   }
+*/
 
   return (
 

@@ -25,7 +25,18 @@ export const estiloLogin = StyleSheet.create({
   areaFormulario: {
     flexDirection:'column',
     padding: 20,
-    alignItems: 'center'
+    alignItems: 'center',
+   
+  },
+
+  texto: {
+    fontSize: 20,
+
+  },
+
+  texto2: {
+    fontSize: 20,
+  
   },
 
   botao: {
@@ -107,7 +118,7 @@ export const estiloLogin = StyleSheet.create({
     textAlign: 'center',
   },
   subtitle: {
-    fontSize: 14,
+    fontSize: 18,
     color: '#060606',
     marginBottom: 20,
     textAlign: 'center',
@@ -147,7 +158,7 @@ export const estiloLogin = StyleSheet.create({
   },
   forgotPasswordText: {
     fontSize: 12,
-    color: '#A3A3A3',
+    color: '#4b2cd4',
   },
   loginButton: {
     width: '100%',
@@ -238,6 +249,15 @@ export const estiloLogin = StyleSheet.create({
     width: 16,
     height: 16,
     backgroundColor: '#6B46C1',
+  },
+
+  image: {
+    width: 100,
+    height: 100,
+    marginTop: 20,
+    borderRadius: 10,
+    borderColor: 'red'
+    
   },
 
 });

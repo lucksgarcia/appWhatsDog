@@ -1,19 +1,20 @@
 import React, {useState, useEffect} from 'react';
 import { View, Text, TextInput, Image, TouchableOpacity, Button} from 'react-native';
-import GradientBackground3 from '../components/backGroundpage/gradientBackground3';
-import estiloLoginGradient from '../components/backGroundpage/gradientBackgroundStyle';
-import { estiloLogin } from '../estilos/estiloLogins';
+import GradientBackground3 from '../../../components/backGroundpage/gradientBackground3';
+import estiloLoginGradient from '../../../components/backGroundpage/gradientBackgroundStyle';
+import { estiloLogin } from '../../../estilos/estiloLogins';
 import { Link } from 'expo-router';
-import pataStyles from '../components/pataPng/pataPngStyles';
-import PataPngCp from '../components/pataPng/pataPngCp';
-import firebase from '../database/firebaseConect';
+import pataStyles from '../../../components/pataPng/pataPngStyles';
+import PataPngCp from '../../../components/pataPng/pataPngCp';
+import firebase from '../../../database/firebaseConect';
+
 
 
 //================================================================================================//
 
-const addPai = () => {
-  
-  const [isSelected, setSelection] = useState(false);
+export default function addPai() {
+
+
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   const [nome, setNome] = useState('');
@@ -25,28 +26,26 @@ const addPai = () => {
 
 
   async function cadastrar() {
-    
-  
+
+    if (nome !== '' & email !== '' & senha !== '' & dataRg !== '') {
       
-    if (nome !== '' && email !== '' && fotoPai !== '' && senha !== '' && dataRg !== '') {
-          let tbPai = await firebase.database().ref('tbPai');
-          let idPai = tbPai.push().key;
+      let tbPai = await firebase.database().ref('tbPai');
+      let idPai = tbPai.push().key;
 
-          tbPai.child(idPai).set({
-              nome: nome,
-              email: email,
-              fotoPai: fotoPai,
-              senha: senha,
-              dataRg: dataRg
-          });
+      tbPai.child(idPai).set({
+        nome: nome,
+        email: email,
+        fotoPai: fotoPai,
+        senha: senha,
+        dataRg: dataRg
+      });
 
-          alert('Cadastrado com sucesso!');
-          setNome('');
-          setMail('');
-          setFotoPai('');
-          setSenha('');
-          setDataRG('')
-      }
+      alert('Cadastrado com sucesso!');
+      setNome('');
+      setMail('');
+      setSenha('');
+      setDataRG('');
+    }
   }
 
   const onRegisterPress = () => {
@@ -106,58 +105,48 @@ const addPai = () => {
           </View>
         </View>
 
-          <View style={estiloLogin.checkboxContainer}>
-            <TouchableOpacity
-              style={estiloLogin.checkboxL}
-              onPress={() => setSelection(!isSelected)}
-            >
-              {isSelected && <View style={estiloLogin.checkboxInner} />}
-            </TouchableOpacity>
-            <Text style={estiloLogin.label}>Para criar seu cadastro você deve estar em de acordo com os Termos & Condições.</Text>
+
+
+        <TouchableOpacity
+          style={estiloLogin.botaoAzul}
+          onPress={() => onRegisterPress()}
+        >
+          <View style={estiloLogin.btnArea}>
+            <Text style={estiloLogin.btnTextoBranco}>Criar Meu Cadastro</Text>
           </View>
+        </TouchableOpacity>
 
-          <TouchableOpacity
-            style={estiloLogin.botaoAzul}
-            onPress={() => onRegisterPress()}
-          >
-            <View style={estiloLogin.btnArea}>
-              <Text style={estiloLogin.btnTextoBranco}>Criar Meu Cadastro</Text>
-            </View>
-          </TouchableOpacity>
-
-          <Text style={estiloLogin.footerText}>
-            Você já é cadastrado?  <Text style={estiloLogin.footerLink}><Link href={'/login'}>Clique aqui</Link></Text>
-          </Text> 
-
-          <Button
-                title="Novo Pai de Dog"
-                onPress={cadastrar}
-            />
+        <Text style={estiloLogin.footerText}>
+          Você já é cadastrado?  <Text style={estiloLogin.footerLink}><Link href={'/pai'}>Clique aqui</Link></Text>
+        </Text>
 
       </View>
- 
+
+      <Button
+          title="Novo Pai de Dog"
+          onPress={cadastrar}
+       />
+
 
       <View style={pataStyles.container}>
         <View style={pataStyles.row}>
           <PataPngCp
-            source={require('../../assets/imagens/pata_azul.png')} // Sua imagem local
+            source={require('../../../../assets/imagens/pata_azul.png')} // Sua imagem local
             angle={10} // Rotaciona a imagem em 45 graus
             style={pataStyles.offsetImage}
           />
           <PataPngCp
-            source={require('../../assets/imagens/pata_azul.png')} // Sua imagem local
+            source={require('../../../../assets/imagens/pata_azul.png')} // Sua imagem local
             angle={20} // Rotaciona a imagem em 45 graus
             style={pataStyles.offsetImage2}
           />
         </View>
       </View>
 
-      <View style={{ alignItems: 'center', paddingBottom:20,}}></View>
-      
+      <View style={{ alignItems: 'center', paddingBottom: 20, }}></View>
+
 
     </GradientBackground3>
 
   );
 }
-
-export default addPai

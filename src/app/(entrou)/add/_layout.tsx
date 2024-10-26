@@ -3,6 +3,7 @@ import { FontAwesome } from '@expo/vector-icons';
 
 export default function Layout() {
         return (
+        
         <Tabs>
                 <Tabs.Screen
                         name="profile"
@@ -36,21 +37,7 @@ export default function Layout() {
                         }}
                 />
 
-                <Tabs.Screen
-                        name="newDog"
-                        options={{
-                        headerShown: false,
-                        title: "Adiciona Dog",
-                        tabBarIcon: ({ focused, color, size }) => {
-
-                                if (focused) {
-                                return <FontAwesome name="check-circle" color={color} size={size} />
-                                }
-                                return <FontAwesome name="circle" color={color} size={size} />
-                                },
-                        }}
-                />
-
+               
                 <Tabs.Screen
                         name="verificaRaca"
                         options={{

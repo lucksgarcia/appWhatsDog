@@ -4,7 +4,6 @@ export const tabEstilo = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
     padding: 20,
   },
 
@@ -60,6 +59,17 @@ export const tabEstilo = StyleSheet.create({
     height: 120,
     backgroundColor: '#D1D5DB',
     borderRadius: 60,
+  },
+
+  profileImageContainer2: {
+    marginBottom: 20,
+  },
+  
+  profileImage2: {
+    width: 100,
+    height: 100,
+    backgroundColor: '#D1D5DB',
+    borderRadius: 50,
   },
 
   button: {
@@ -181,6 +191,15 @@ export const tabEstilo = StyleSheet.create({
     padding: 16,
   },
 
+  optionButton2: {
+    alignItems: 'center',
+    backgroundColor: 'white',
+    borderColor: '#0b6af7',
+    borderWidth: 1,
+    borderRadius: 8,
+    padding: 10,
+  },
+
   imageContainer: {
     borderColor: 'red',
     borderWidth: 2,
@@ -190,8 +209,8 @@ export const tabEstilo = StyleSheet.create({
   },
 
   image: {
-    width: 250,
-    height: 170,
+    width: 200,
+    height: 150,
   },
 
   resultContainer: {
@@ -203,6 +222,28 @@ export const tabEstilo = StyleSheet.create({
 
   resultText: {
     color: '#1d4ed8',
+  },
+
+  itemContainer: {
+    padding: 15,
+    marginBottom: 10,
+    backgroundColor:'#1d4ed8',
+    borderWidth: 2,
+    borderColor: '#ffff',
+    borderRadius:10,
+  },
+  name: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#FFCF6F'
+  },
+  breed: {
+    fontSize: 16,
+    color: '#ffff',
+  },
+  age: {
+    fontSize: 16,
+    color: '#ffff',
   },
 
 });

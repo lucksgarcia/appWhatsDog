@@ -1,8 +1,9 @@
+
+
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import firebase from 'firebase/compat/app';
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from "firebase/compat/database";
-
 
 
 // Your web app's Firebase configuration

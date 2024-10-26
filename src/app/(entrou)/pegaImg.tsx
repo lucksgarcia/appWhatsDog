@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, } from 'react-native';
-import GradientBackground from '../components/backGroundpage/gradientBackground';
-import stylesGradient from '../components/backGroundpage/gradientBackgroundStyle';
+import GradientBackground from '../../components/backGroundpage/gradientBackground';
+import stylesGradient from '../../components/backGroundpage/gradientBackgroundStyle';
 
 
 //====================================================//

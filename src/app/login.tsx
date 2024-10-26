@@ -10,40 +10,43 @@ import { estilo } from '../estilos/estiloPrincipal';
 
 //====================================================//
 
-const login = () => {
-
+export default function login(){
 
 
   return (
+    
     <GradientBackground3 style={estiloLoginGradient.container}>
 
-      <View style={estiloLogin.containerlogoPages}>
-        <Text style={estiloLogin.textologoPages}>What's DOG</Text>
-      </View>
-
-      <Text style={estiloLogin.title}>Seja bem-vindo(a) de volta!</Text>
-      <Text style={estiloLogin.subtitle}>Faça o login para continuar</Text>
-
+      
       <View style={estiloLogin.areaFormulario}>
+        
+        <View style={estiloLogin.containerlogoPages}>
+          <Text style={estiloLogin.textologoPages}>What's DOG</Text>
+        </View>
+
+        <Text style={estiloLogin.title}>Seja bem-vindo(a) de volta!</Text>
+        <Text style={estiloLogin.subtitle}>Faça o login para continuar</Text>
+
+        
         <View>
-          <Text>E-Mail: </Text>
+          <Text style={estiloLogin.texto2}>E-Mail:</Text>
           <TextInput
             style={estiloLogin.input}
             placeholder="Digite seu E-mail"
-            placeholderTextColor="#A3A3A3"
+            placeholderTextColor="#3c3a3a"
             keyboardType="email-address"
           />
 
-          <Text>Senha: </Text>
+          <Text style={estiloLogin.texto2}>Senha:</Text>
           <View style={estiloLogin.passwordContainer}>
             <TextInput
               style={estiloLogin.passwordInput}
               placeholder="Digite sua senha"
-              placeholderTextColor="#A3A3A3"
+              placeholderTextColor="#3c3a3a"
               secureTextEntry
             />
             <TouchableOpacity style={estiloLogin.eyeIcon}>
-              <Text style={{ color: '#A3A3A3' }}>👁️</Text>
+              <Text style={{ color: '#3c3a3a' }}>👁️</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -62,7 +65,7 @@ const login = () => {
           </TouchableOpacity>
 
           <Text style={estiloLogin.registerText}>
-            Não é cadastrado?  <Text style={estiloLogin.registerLink}><Link href={'/newPai'}>Cadastre-se aqui</Link></Text>
+            Não é cadastrado?  <Text style={estiloLogin.registerLink}><Link href={'/pai'}>Cadastre-se aqui</Link></Text>
           </Text>
 
         </View>
@@ -93,4 +96,3 @@ const login = () => {
   );
 }
 
-export default login
